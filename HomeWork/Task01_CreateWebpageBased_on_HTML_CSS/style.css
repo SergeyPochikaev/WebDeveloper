@@ -1,0 +1,93 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: url(./image/fon.jpg);
+}
+
+.wrapper {
+  width: 1200px;
+  height: 800px;
+  position: relative;
+  background-color: darkcyan;
+  margin: 0 auto;
+}
+
+.chat {
+  width: 1200px;
+  height: 800px;
+  position: relative;
+  right: -10px;
+  background: url(./image/fon.jpg);
+}
+
+/* div {
+  padding: 10px;
+  margin: 10px;
+  color: rgb(12, 137, 12)ff;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 0, 4);
+  font: 14pt sans-serif;
+} */
+
+h1 {
+  color: brown;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+}
+
+a {
+  margin-right: 10px;
+}
+
+main {
+  padding: 10px;
+  overflow: hidden;
+}
+
+img {
+  float: left;
+  margin-right: 10px;
+  border-bottom: solid;
+  border-radius: 50%;
+}
+
+p {
+  /* font-family: 'Pathway Gothic One', sans-serif; */
+  font-family: 'Roboto Condensed', sans-serif;
+  hyphens: auto;
+}
+
+ul {
+  position: relative;
+  left: 500px;
+  font-weight: bold;
+  /* text-align: center; */
+}
+
+.chat_ul {
+  position: relative;
+  left: 30px;
+}
+
+hr {
+  position: absolute;
+  top: 700px;
+  right: 15px;
+  left: 15px;
+  /* width: 100%; */
+}
+
+footer {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  text-align: end;
+}
+
+hr {
+  border-color: brown;
+  width: 90%;
+}
