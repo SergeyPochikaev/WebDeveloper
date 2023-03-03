@@ -6,44 +6,67 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        // const name = 'Alex';
-        var name = prompt("Ваше имя");
-        let age = 25;
-        console.log(`Привет `);
+        function go() {
+            // const name = 'Alex';
+            //var name = prompt("Ваше имя");
+            var name = document.getElementById('name').value
+            var age = document.getElementById('age').value
+            //let age = 25;
+            var str = `Привет ${name}, вам ${age}!`
+            if (age >= 18 && age < 55) {
+                str = str + 'И вам все можно'
+            }
+            document.getElementById('out').innerText = str
+            //console.log(`Привет ${name} твой возраст ${age}`);
+            document.getElementById('name').value = ""
+        }
     </script>
 </head>
 
 <body>
+
     <div class="wrapper">
+
         <header>
             <h1>Заголовок</h1>
         </header>
+
         <nav>
-            <a href="http://ya.ru" target="_blank">Яндекс</a>
-            <a href="chat.html">Чат</a>
+            <ul class="menu">
+                <li> <a href="http://ya.ru" target="_blank">Яндекс</a></li>
+                <li> <a href="chat.html">Чат</a></li>
+            </ul>
+
         </nav>
         <main>
             <h2>Мой сайт</h2>
+            <input id="name" type="text" placeholder="Как вас зовут?" value="">
+            <input id="age" type="text" placeholder="Ваш возраст?" value="">
+            <button onclick="go()">Ввод</button><span id="out">Привет</span>
             <p>
-                
+
                 <img src="./img/cat.jpg" alt="Котики" width="200">
-                <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit. Maiores porro dolores quam ab dicta ipsum dolorem
+                <b>Lorem</b>, ipsum dolor sit amet consectetur adipisicing elit. Maiores porro dolores quam ab dicta
+                ipsum dolorem
                 eaque hic quae voluptatibus quis, harum, minima vero molestiae repellat! Consectetur nam, quisquam culpa
                 esse reprehenderit porro in quam sapiente unde ex. Facilis dicta iusto debitis, alias commodi labore
                 laboriosam fuga ad enim nisi.
             </p>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ducimus, non eveniet fugiat in similique quia animi beatae neque porro!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ducimus, non eveniet fugiat in similique
+                quia animi beatae neque porro!
             </p>
+            <div class="chat">
+                <h2>Чат</h2>
+                <input type="text">
+                <button>Отправить</button>
+                <ul>
+                    <li>Привет</li>
+                    <li>Как дела</li>
+                    <li>Хорошо</li>
+                </ul>
+            </div>
 
-            <h2>Чат</h2>
-            <input type="text">
-            <button>Отправить</button>
-            <ul>
-                <li>Привет</li>
-                <li>Как дела</li>
-                <li>Хорошо</li>
-            </ul>
         </main>
         <footer>(с)2023</footer>
     </div>
