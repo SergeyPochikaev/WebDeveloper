@@ -1,6 +1,7 @@
-/* <input id="name" type="text" placeholder="Как вас зовут?" value="">
-<input id="age" type="text" placeholder="Ваш возраст?" value="">
-<button onclick="go()">Ввод</button><span id="out">Привет</span> */
+//  <!-- <input id="name" type="text" placeholder="Как вас зовут?" value="">
+// <input id="age" type="text" placeholder="Ваш возраст?" value="">
+// <button onclick="go()">Ввод</button><span id="out">Привет</span> -->
+
 get()
 
 setInterval(get, 2000) // организует интервал вызова get раз за 2 сек
