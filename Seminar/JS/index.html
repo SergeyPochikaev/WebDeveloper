@@ -5,22 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function go() {
-            // const name = 'Alex';
-            //var name = prompt("Ваше имя");
-            var name = document.getElementById('name').value
-            var age =parseInt(document.getElementById('age').value)
-            //let age = 25;
-            var str = `Привет ${name}, вам ${age}!`
-            if (age >= 18 && age < 55) {
-                str = str + 'И вам все можно'
-            }
-            document.getElementById('out').innerText = str
-            //console.log(`Привет ${name} твой возраст ${age}`);
-            document.getElementById('name').value = ""
-        }
-    </script>
+    <script defer src="app,js"></script>
 </head>
 
 <body>
@@ -40,9 +25,6 @@
         </nav>
         <main>
             <h2>Мой сайт</h2>
-            <input id="name" type="text" placeholder="Как вас зовут?" value="">
-            <input id="age" type="text" placeholder="Ваш возраст?" value="">
-            <button onclick="go()">Ввод</button><span id="out">Привет</span>
             <p>
 
                 <img src="./img/cat.jpg" alt="Котики" width="200">
@@ -59,12 +41,8 @@
             <div class="chat">
                 <h2>Чат</h2>
                 <input type="text">
-                <button>Отправить</button>
-                <ul>
-                    <li>Привет</li>
-                    <li>Как дела</li>
-                    <li>Хорошо</li>
-                </ul>
+                <button>Отправить</button><br>
+                <span id="messages"></span>
             </div>
 
         </main>

@@ -7,18 +7,39 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function go() {
-            // const name = 'Alex';
-            //var name = prompt("Ваше имя");
-            var name = document.getElementById('name').value
-            var age =parseInt(document.getElementById('age').value)
-            //let age = 25;
-            var str = `Привет ${name}, вам ${age}!`
-            if (age >= 18 && age < 55) {
-                str = str + 'И вам все можно'
+            var rost = document.getElementById('rost').value
+            var massa = parseInt(document.getElementById('massa').value)
+            var index = (massa / rost ** 2) * 10000
+
+            switch (true) {
+                case index < 16:
+                    str = ' Выраженный дефицит массы тела'
+                    break;
+                case 16 < index && index < 18.5:
+                    str = ' Недостаточная масса тела'
+                    break;
+                case 18.5 < index && index < 25:
+                    str = ' Нормальная масса тела '
+                    break;
+                case 25 < index && index < 30:
+                    str = ' Избыточная масса тела (предожирение)'
+                    break;
+                case 30 < index && index < 35:
+                    str = ' Ожирение 1-ой степени'
+                    break;
+                case 35 < index && index < 40:
+                    str = ' Ожирение 2-ой степени'
+                    break;
+                case index > 40:
+                    str = ' Ожирение 3-ой степени'
+                    break;
+                default:
+                    str = ' Все Ок!'
+                    break;
             }
+
             document.getElementById('out').innerText = str
-            //console.log(`Привет ${name} твой возраст ${age}`);
-            document.getElementById('name').value = ""
+            document.getElementById('imt').innerText = index
         }
     </script>
 </head>
@@ -40,9 +61,11 @@
         </nav>
         <main>
             <h2>Мой сайт</h2>
-            <input id="name" type="text" placeholder="Как вас зовут?" value="">
-            <input id="age" type="text" placeholder="Ваш возраст?" value="">
-            <button onclick="go()">Ввод</button><span id="out">Привет</span>
+            <input id="rost" type="text" placeholder="Ваш рост в см. " value="">
+            <input id="massa" type="text" placeholder="Ваш вес в кг. " value="">
+            <button onclick="go()">Рассчитать</button><br>
+            <span id="out"> Индекс ИМТ </span>
+            <span id="imt"></span>
             <p>
 
                 <img src="./img/cat.jpg" alt="Котики" width="200">
