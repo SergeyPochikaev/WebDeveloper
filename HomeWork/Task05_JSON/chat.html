@@ -1,3 +1,7 @@
+<?php
+    $title = "Мой сайт"
+    //логика подключение БД
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -5,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?=$title;?></title>
     <link rel="stylesheet" href="./style.css" type="text/css">
     <link rel="shortcut icon" href="chat.ico" type="image/x-icon">
     <script defer src="app.js"></script>
@@ -17,14 +21,14 @@
             <h1>Есть вопросы? Пишите!</h1>
         </header>
         <h2>Чат</h2>
-        <input id="text" type="text" placeholder="Как вас зовут?" value="">
+        <input id="name" type="text" placeholder="Как вас зовут?" value="">
         <button onclick="send()">Отправить</button>
         <button onclick="cl()">Очистить чат</button>
         <br>
         <br>
         <span id="messages"></span><br>
         <br>
-        <a href="index.html">Главная</a>
+        <a href="index.php">Главная</a>
     </div>
 </body>
 
