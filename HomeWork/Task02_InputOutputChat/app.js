@@ -11,10 +11,10 @@ function cl() {
 }
 
 function send() {
-  var name = document.getElementById('name').value
+  var name = document.getElementById('text').value
   var str = `Привет ${name}!`
   document.getElementById('messages').innerHTML = str
-  document.getElementById('name').value = ""
+  document.getElementById('text').value = ""
   console.log(str)
 }
 
