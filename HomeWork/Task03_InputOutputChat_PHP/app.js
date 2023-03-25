@@ -8,13 +8,13 @@ function cl() {
 
 function send()
 {
-  var messages = document.getElementById('text').value
+  var messages = document.getElementById('name').value
     (async () => {
       var response = await fetch('chat.php?message' + message)
       var answer = await response.text()
     }
     )()
-  document.getElementById('text').value = ""
+  document.getElementById('name').value = ""
 }
 
 function get() {
